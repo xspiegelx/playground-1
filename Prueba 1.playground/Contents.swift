@@ -1,5 +1,7 @@
 import UIKit
 
+// Variables
+
 var str = "Hello"
 var name = "Niko"
 name = "Juan"
@@ -65,6 +67,9 @@ type(of: medias)
 var muchos: [Any] = ["hola", "chau", 2]
 type(of: muchos)
 
+
+// Arrays
+
 var letras: [String]
 letras = ["hola", "chau"]
 
@@ -76,10 +81,13 @@ var dos = ["tristes"]
 var tres = uno + dos
 tres += ["tigres"]
 
+
+// Dictionary
+
 var dictionary = ["nombre": "Niko", "pelo": "castaño", "ojos": "marrones"]
 dictionary["nombre"]
 dictionary["ojos"]
-"\(dictionary["nombre"]) tiene ojos \(dictionary["ojos"])"
+"\(dictionary["nombre"] ?? "") tiene ojos \(dictionary["ojos"] ?? "") y el pelo \(dictionary["pelo"]!)"
 
 var casita = [
                 "ambientes": "3",
@@ -87,6 +95,9 @@ var casita = [
                 "balcones": "si"
             ]
 casita["baños"]
+
+
+// If, Else if, Else
 
 var accion: String
 var persona = "mala"
@@ -116,3 +127,51 @@ if !ruedas && motor {
     vehiculo = "carting"
 }
 
+// Loops
+
+for i in 1...10 {
+    print ("\(i) x 10 is \(i * 10)")
+}
+
+var fake = "Fakers gonna"
+
+for _ in 1 ... 5 {
+    fake += " fake"
+}
+
+print(fake)
+
+// Loops in arrays
+var pjSongs = ["Black", "Alive", "Jeremy", "Even Flow"]
+for song in pjSongs {
+    print ("A few Peral Jam songs are \(song)")
+}
+
+var positive = ["amor", "felicidad", "divertido"]
+var negative = ["odio", "tristeza", "aburrido"]
+for w in 0 ..< positive.count {
+    print ("\(positive[w]) es opuesto a \(negative[w])")
+}
+
+// Counter Loop
+var counter = 0
+
+while true {
+    print("Counter is now \(counter)")
+    counter += 1
+
+    if counter == 21 {
+        break
+    }
+}
+
+// Continue en vez de break
+var songs2 = ["Shake it Off", "You Belong with Me", "Look What You Made Me Do"]
+
+for song1 in songs2 {
+    if song1 == "You Belong with Me" {
+        continue
+    }
+
+    print("My favorite song is \(song1)")
+}
