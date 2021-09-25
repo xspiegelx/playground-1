@@ -81,7 +81,7 @@ var dos = ["tristes"]
 var tres = uno + dos
 tres += ["tigres"]
 
-
+//-----------------------------------------------------------------------------------------------------------------------
 // Dictionary
 
 var dictionary = ["nombre": "Niko", "pelo": "castaño", "ojos": "marrones"]
@@ -96,7 +96,7 @@ var casita = [
             ]
 casita["baños"]
 
-
+//-----------------------------------------------------------------------------------------------------------------------
 // If, Else if, Else
 
 var accion: String
@@ -127,6 +127,7 @@ if !ruedas && motor {
     vehiculo = "carting"
 }
 
+//-----------------------------------------------------------------------------------------------------------------------
 // Loops
 
 for i in 1...10 {
@@ -174,4 +175,87 @@ for song1 in songs2 {
     }
 
     print("My favorite song is \(song1)")
+}
+
+//-----------------------------------------------------------------------------------------------------------------------
+// Swicht/Case
+
+let season = 1
+switch season {
+case 0:
+    print ("Summer")
+    
+case 1:
+    print ("Autumn")
+    
+case 2:
+    print ("Winter")
+    
+case 3:
+    print ("Spring")
+    
+default: print ("Roberto")
+}
+
+let numeritos = 50
+switch numeritos {
+case 0...5:
+    print ("Primera tanda")
+    
+case 6...10:
+    print ("segunda tanda")
+    
+case 11...15:
+    print ("tercera tanda")
+    
+case 16...20:
+    print ("cuarta tanda")
+    
+default: print ("fuera de rango")
+}
+
+//-----------------------------------------------------------------------------------------------------------------------
+// Functions
+
+func discoFavorito() {
+    print("Mi disco favorito es el Ten")
+}
+
+discoFavorito()
+
+
+func unBuenAlbum(titulo: String, banda: String) { //string es String case sensitive, ojo
+    print("Un buen album es \(titulo) de \(banda)")
+}
+
+unBuenAlbum(titulo: "Ten", banda: "Pearl Jam")
+unBuenAlbum(titulo: "Ok Computer", banda: "Radiohead")
+
+func countLettersInString(string: String) {
+    print("The string \(string) has \(string.count) letters.")
+}
+
+countLettersInString(string: "psicoterapeuta")
+
+//otra forma
+func contaLetras(en string: String) {
+    print("The string \(string) has \(string.count) letters.")
+}
+
+contaLetras(en: "psicoterapeuta")
+
+func temasDePearlJam(tema: String) -> Bool {
+    if tema == "Alive" { return true }
+    if tema == "Black" { return true }
+    if tema == "Jeremy" { return true }
+    
+    return false
+}
+
+temasDePearlJam(tema: "Alive")
+
+if temasDePearlJam(tema: "Jeremy") {
+    print ("yeah")
+}    else {
+    print ("nah")
 }
