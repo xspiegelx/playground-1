@@ -259,3 +259,20 @@ if temasDePearlJam(tema: "Jeremy") {
 }    else {
     print ("nah")
 }
+
+//-----------------------------------------------------------------------------------------------------------------------
+// Optionals
+
+func getHaterStatus(weather: String) -> String? {   //weather es un parametro que te da un string, pero si da como resultado ningun valor, te da un nill
+    if weather == "sunny" {                         // el  "?" significa que es opcional, que puede regresar un string (en este caso) o no
+        return nil
+    } else {
+        return "Hate"
+    }
+}
+getHaterStatus(weather: "sunny")
+
+var status: String?                                 //aca tambien tenemos que decirle que es "?" sino espera siempre un string, no acepta un nill
+status = getHaterStatus(weather: "rainy")           // o podemos omitir decirle que es un string y que directamente lo piense swift por nosotros ;) var status: getHaterblabla(weather:"rainy")
+
+//par aca porque no estoy entendiendo nada, no es mi dia mental :S
