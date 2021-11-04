@@ -2,11 +2,11 @@ import UIKit
 
 // Variables
 
-var str = "Hello"
+var str = "Hello" //var es una variable que puede ser cambiada
 var name = "Niko"
 name = "Juan"
 
-let casa = "Roberto"
+let casa = "Roberto" //let es una constante, no puede ser cambiada
 
 var emotion: String
 emotion = "love"
@@ -48,8 +48,8 @@ name == "Peter"
 
 !rain
 
-name == "Peter"
-name != "Peter"
+name == "Peter" //"==" es igual a. "=" es usado para asignar valores a las variables
+name != "Peter" //"!=" es "no igual" o "diferente de"
 
 ab == 3
 
@@ -276,3 +276,41 @@ var status: String?                                 //aca tambien tenemos que de
 status = getHaterStatus(weather: "rainy")           // o podemos omitir decirle que es un string y que directamente lo piense swift por nosotros ;) var status: getHaterblabla(weather:"rainy")
 
 //par aca porque no estoy entendiendo nada, no es mi dia mental :S
+
+func takeHaterAction(status: String) {              //ahora tenemos una funcion que actua dependiendo de la otra, pero esta funcion no permite un nil
+    if status == "Hate" {
+        print("Hating")
+    }
+}
+
+takeHaterAction
+
+//if let haterStatus = getHaterStatus(weather: "rainy") {
+ //   takeHaterAction(status: haterStatus)
+//}
+
+
+
+
+
+
+
+//aca un ejemplo de optionals, donde es importante que de resultado "nil" en vez de "0"
+var items = ["James", "John", "Sally"]
+func position(of string: String, in array: [String]) -> Int? { //"Int" o "Int?"
+    for i in 0 ..< array.count {
+        if array[i] == string {
+            return i
+        }
+    }
+
+    return nil //"return 0" o "return nil"
+}
+
+// si en vez de "Int?" pongo "Int?" y en vez de "return 0" pongo "return nil", el resultado varia porque si la posicion era "0", no sabes si es que no habia nada o era "0". En cambio con nil, si el resultado es "0" va a poner "0" y si no existe, en vez de "0" va a poner "nil" y te aseguras de que no haya errores
+let jamesPosition = position(of: "James", in: items) //este esta en la posicion "0"
+let johnPosition = position(of: "John", in: items)
+let sallyPosition = position(of: "Sally", in: items)
+let bobPosition = position(of: "Bob", in: items) //este no existe
+
+
